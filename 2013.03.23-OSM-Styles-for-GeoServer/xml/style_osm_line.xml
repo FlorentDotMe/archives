@@ -1,0 +1,985 @@
+<Style name="Line">
+<!--    <Rule>
+      &maxscale_zoom15;
+      &minscale_zoom17;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#0000FF</CssParameter>
+      	<CssParameter name="stroke-width">1</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>-->
+    
+<!-- Zoom 18 to 15 -->
+    <Rule>
+      <Filter>[highway]='footway' or [highway]='pedestrian' or [highway]='path' or [highway]='steps'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#A20808</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-dasharray">1 3</CssParameter>
+         <CssParameter name="stroke-linejoin">round</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         <CssParameter name="stroke-opacity">0.5</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <Filter>[railway] = 'rail' and not [tunnel] = 'yes'</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#999999</CssParameter>
+        <CssParameter name="stroke-width">8</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+      </LineSymbolizer>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#FFFFFF</CssParameter>
+        <CssParameter name="stroke-width">6</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+        <CssParameter name="stroke-dasharray">8,12</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='motorway_link'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">10</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#506077</CssParameter>
+      	<CssParameter name="stroke-width">9</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>    
+    <Rule>
+      <Filter>[highway]='trunk_link'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">10</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#a8daa8</CssParameter>
+      	<CssParameter name="stroke-width">9</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='primary_link'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">10</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#ec989a</CssParameter>
+      	<CssParameter name="stroke-width">9</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='service' or [highway]='track' or [amenity]='parking'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">8</CssParameter>
+         <CssParameter name="stroke-linejoin">round</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#dcdcdc</CssParameter>
+      	<CssParameter name="stroke-width">6</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='unclassified' or [highway]='road' or [highway]='residential' or [highway]='unsurfaced' or [highway]='living_street'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">10</CssParameter>
+         <CssParameter name="stroke-linejoin">round</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fefefe</CssParameter>
+      	<CssParameter name="stroke-width">9</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <TextSymbolizer name="name" size="10" halo="1" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='tertiary'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">10</CssParameter>
+         <CssParameter name="stroke-linejoin">round</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fefeb3</CssParameter>
+      	<CssParameter name="stroke-width">9</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <TextSymbolizer name="name" size="11" halo="1.5" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='secondary'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">14</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fdd6a4</CssParameter>
+      	<CssParameter name="stroke-width">13</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/sec_shield5.png" size="18"/>
+      <TextSymbolizer name="name" size="11" halo="1.5" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='primary'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">14</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#ec989a</CssParameter>
+      	<CssParameter name="stroke-width">13</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/pri_shield5.png" size="18"/>
+      <TextSymbolizer name="name" size="11" halo="1.5" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='motorway'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">14</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#506077</CssParameter>
+      	<CssParameter name="stroke-width">13</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/mot_shield5.png" size="18"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='trunk'</Filter>
+      &maxscale_zoom15;
+      &minscale_zoom18;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">14</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#a8daa8</CssParameter>
+      	<CssParameter name="stroke-width">13</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/tru_shield5.png" size="18"/>
+    </Rule>
+<!-- END Zoom 18 to 16 -->
+<!-- Zoom 16 to 14 -->
+    <Rule>
+      <Filter>[highway]='footway' or [highway]='pedestrian' or [highway]='path'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#A20808</CssParameter>
+      	<CssParameter name="stroke-width">1.5</CssParameter>
+      	<CssParameter name="stroke-dasharray">1 3</CssParameter>
+         <CssParameter name="stroke-linejoin">round</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         <CssParameter name="stroke-opacity">0.5</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <Filter>[railway] = 'rail' and not [tunnel] = 'yes'</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#999999</CssParameter>
+        <CssParameter name="stroke-width">3</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+      </LineSymbolizer>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#FFFFFF</CssParameter>
+        <CssParameter name="stroke-width">1.5</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+        <CssParameter name="stroke-dasharray">8,12</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='motorway_link'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">5</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#506077</CssParameter>
+      	<CssParameter name="stroke-width">4</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>    
+    <Rule>
+      <Filter>[highway]='trunk_link'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">4</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#a8daa8</CssParameter>
+      	<CssParameter name="stroke-width">3</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='primary_link'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">4</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#ec989a</CssParameter>
+      	<CssParameter name="stroke-width">3</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='service' or [highway]='track' or [amenity]='parking'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">3</CssParameter>
+         <CssParameter name="stroke-linejoin">round</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#dcdcdc</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='unclassified' or [highway]='road' or [highway]='residential' or [highway]='unsurfaced' or [highway]='living_street'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">4</CssParameter>
+         <CssParameter name="stroke-linejoin">round</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fefefe</CssParameter>
+      	<CssParameter name="stroke-width">3</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <TextSymbolizer name="name" size="10" halo="1" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='tertiary'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">4</CssParameter>
+         <CssParameter name="stroke-linejoin">round</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fefeb3</CssParameter>
+      	<CssParameter name="stroke-width">3</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <TextSymbolizer name="name" size="10" halo="1" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='secondary'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">6</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fdd6a4</CssParameter>
+      	<CssParameter name="stroke-width">5</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/sec_shield5.png" size="18"/>
+      <TextSymbolizer name="name" size="10" halo="1" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='primary'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">6</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#ec989a</CssParameter>
+      	<CssParameter name="stroke-width">5</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/pri_shield5.png" size="18"/>
+      <TextSymbolizer name="name" size="10" halo="1" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='motorway'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">6</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#506077</CssParameter>
+      	<CssParameter name="stroke-width">5</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/mot_shield5.png" size="18"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='trunk'</Filter>
+      &maxscale_zoom14;
+      &minscale_zoom15;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">6</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#a8daa8</CssParameter>
+      	<CssParameter name="stroke-width">5</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/tru_shield5.png" size="18"/>
+    </Rule>
+<!-- END Zoom 16 to 14 --> 
+<!-- Zoom 14 to 12 -->
+    <Rule>
+      <Filter>[highway]='footway' or [highway]='pedestrian' or [highway]='path'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#A20808</CssParameter>
+      	<CssParameter name="stroke-width">0.5</CssParameter>
+      	<CssParameter name="stroke-dasharray">0.5 1</CssParameter>
+         <CssParameter name="stroke-linejoin">round</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         <CssParameter name="stroke-opacity">0.5</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <Filter>[railway] = 'rail' and not [tunnel] = 'yes'</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#999999</CssParameter>
+        <CssParameter name="stroke-width">2</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+      </LineSymbolizer>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#FFFFFF</CssParameter>
+        <CssParameter name="stroke-width">1</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+        <CssParameter name="stroke-dasharray">8,12</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='motorway_link'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">4</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#506077</CssParameter>
+      	<CssParameter name="stroke-width">3</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>    
+    <Rule>
+      <Filter>[highway]='trunk_link'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">3</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#a8daa8</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='primary_link'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">3</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#ec989a</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='service' or [highway]='track' or [amenity]='parking'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#dcdcdc</CssParameter>
+      	<CssParameter name="stroke-width">1</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='unclassified' or [highway]='road' or [highway]='residential' or [highway]='unsurfaced' or [highway]='living_street'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fefefe</CssParameter>
+      	<CssParameter name="stroke-width">1</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='tertiary'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fefeb3</CssParameter>
+      	<CssParameter name="stroke-width">1</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='secondary'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">4</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fdd6a4</CssParameter>
+      	<CssParameter name="stroke-width">3</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='primary'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">5</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#ec989a</CssParameter>
+      	<CssParameter name="stroke-width">4</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/pri_shield5.png" size="18"/>
+      <TextSymbolizer name="name" size="10" halo="1" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='motorway'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">5</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#506077</CssParameter>
+      	<CssParameter name="stroke-width">4</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/mot_shield5.png" size="18"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='trunk'</Filter>
+      &maxscale_zoom12;
+      &minscale_zoom14;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">5</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#a8daa8</CssParameter>
+      	<CssParameter name="stroke-width">4</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/tru_shield5.png" size="18"/>
+    </Rule>
+<!-- END Zoom 16 to 14 -->
+<!-- Zoom 12 to 11 -->
+    <Rule>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <Filter>[railway] = 'rail' and not [tunnel] = 'yes'</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#999999</CssParameter>
+        <CssParameter name="stroke-width">2</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+      </LineSymbolizer>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#FFFFFF</CssParameter>
+        <CssParameter name="stroke-width">1</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+        <CssParameter name="stroke-dasharray">8,12</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='motorway_link'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">2</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#506077</CssParameter>
+      	<CssParameter name="stroke-width">1</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>    
+    <Rule>
+      <Filter>[highway]='trunk_link'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">2</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#a8daa8</CssParameter>
+      	<CssParameter name="stroke-width">1</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='primary_link'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">2</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#ec989a</CssParameter>
+      	<CssParameter name="stroke-width">1</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='service' or [highway]='track' or [amenity]='parking'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#dcdcdc</CssParameter>
+      	<CssParameter name="stroke-width">0.5</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='unclassified' or [highway]='road' or [highway]='residential' or [highway]='unsurfaced' or [highway]='living_street'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fefefe</CssParameter>
+      	<CssParameter name="stroke-width">0.5</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='tertiary'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fefeb3</CssParameter>
+      	<CssParameter name="stroke-width">0.5</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='secondary'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fdd6a4</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='primary'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">3</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#ec989a</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/pri_shield5.png" size="18"/>
+      <TextSymbolizer name="name" size="10" halo="1" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='motorway'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">3</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#506077</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/mot_shield5.png" size="18"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='trunk'</Filter>
+      &maxscale_zoom11;
+      &minscale_zoom12;
+      <LineSymbolizer>
+         <Stroke>
+         <CssParameter name="stroke">#bbbbba</CssParameter>
+         <CssParameter name="stroke-width">3</CssParameter>
+         <CssParameter name="stroke-linecap">round</CssParameter>
+         </Stroke>
+      </LineSymbolizer>
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#a8daa8</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/tru_shield5.png" size="18"/>
+    </Rule>
+<!-- END Zoom 12 to 11 --> 
+<!-- Zoom 11 to 1 -->
+    <Rule>
+      &maxscale_zoom1;
+      &minscale_zoom11;
+      <Filter>[railway] = 'rail' and not [tunnel] = 'yes'</Filter>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#999999</CssParameter>
+        <CssParameter name="stroke-width">2</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+      </LineSymbolizer>
+      <LineSymbolizer>
+        <CssParameter name="stroke">#FFFFFF</CssParameter>
+        <CssParameter name="stroke-width">1</CssParameter>
+        <CssParameter name="stroke-linejoin">round</CssParameter>
+        <CssParameter name="stroke-dasharray">8,12</CssParameter>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='secondary'</Filter>
+      &maxscale_zoom1;
+      &minscale_zoom11;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#fdd6a4</CssParameter>
+      	<CssParameter name="stroke-width">1</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='primary'</Filter>
+      &maxscale_zoom1;
+      &minscale_zoom11;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#ec989a</CssParameter>
+      	<CssParameter name="stroke-width">1</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/pri_shield5.png" size="18"/>
+      <TextSymbolizer name="name" size="10" halo="1" fill="#000000"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='motorway'</Filter>
+      &maxscale_zoom1;
+      &minscale_zoom11;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#506077</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/mot_shield5.png" size="18"/>
+    </Rule>
+    <Rule>
+      <Filter>[highway]='trunk'</Filter>
+      &maxscale_zoom1;
+      &minscale_zoom11;
+      <LineSymbolizer>
+    	<Stroke>
+      	<CssParameter name="stroke">#a8daa8</CssParameter>
+      	<CssParameter name="stroke-width">2</CssParameter>
+      	<CssParameter name="stroke-linejoin">round</CssParameter>
+      	<CssParameter name="stroke-linecap">round</CssParameter>
+    	</Stroke>
+      </LineSymbolizer>
+      <ShieldSymbolizer name="ref" font-size="10" file="symbols/tru_shield5.png" size="18"/>
+    </Rule>
+<!-- END Zoom 11 to 1 --> 
+</Style>

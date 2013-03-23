@@ -1,0 +1,22 @@
+OSM Styles for GeoServer
+------------------------
+# Author: Florent Bervas
+# Mail: florentdotme@gmail.com
+# GIT Repository: http://github.com/FlorentDotMe/
+------------------------
+Info: Provided files should be used for OSM rendering on GeoServer
+
+Files
+------------------------
+style_osm_line.sld
+	: styles for OSM data "planet_osm_line"
+	: styles for OSM data "planet_osm_roads"
+
+style_osm_polygon.sld
+	: styles for OSM data "planet_osm_polygon"
+
+Instructions
+------------
+1. Add .sld files into "styles" directory.
+2. Add "symbols" directory into "styles" directory.
+3. Create new styles from GeoServer administration website.
